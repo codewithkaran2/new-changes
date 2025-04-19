@@ -287,17 +287,13 @@ function gameOver() {
   if (bgMusic) bgMusic.pause();
 }
 
-// Called when Survival Mode starts
 function survivalStartGame() {
-  console.log("Survival mode starting...");
-
-  // Get canvas & context
-  canvas = document.getElementById("gameCanvas");
-  ctx = canvas.getContext("2d");
-
-  // Attach event listeners (only once if needed)
+  console.log('Survival mode starting...');
+  canvas = document.getElementById('gameCanvas');
+  ctx = canvas.getContext('2d');
   attachEventListeners();
-
+  const nameInput = document.getElementById('p1Name');
+  playerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Player';
 
   // Reset player state
   player.x = canvas.width/2 - 25;
