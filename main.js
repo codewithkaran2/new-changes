@@ -21,6 +21,7 @@ const p1NameInput = document.getElementById("p1Name");
 const p2NameInput = document.getElementById("p2Name");
 const startButton = document.getElementById("startButton");
 const p2ControlBox = document.getElementById("p2ControlBox");
+const modeBoxes = document.querySelectorAll(".modeBox");  // New: Game mode boxes
 
 // Function to add a pulsing animation to the start button.
 function animateStartButton() {
@@ -29,7 +30,7 @@ function animateStartButton() {
   }
 }
 
-// Functions to select game mode:
+// Functions to select game mode with glowing effect:
 function selectDuoMode() {
   gameMode = "duo";
   // Show both name inputs and control boxes for Duo Mode.
@@ -47,6 +48,7 @@ function selectDuoMode() {
     p2ControlBox.style.display = "block";
   }
   animateStartButton();
+  highlightSelectedMode("duo");  // New: Highlight Duo Mode box
 }
 
 function selectSurvivalMode() {
@@ -66,6 +68,18 @@ function selectSurvivalMode() {
     p2ControlBox.style.display = "none";
   }
   animateStartButton();
+  highlightSelectedMode("survival");  // New: Highlight Survival Mode box
+}
+
+// New: Function to highlight selected game mode
+function highlightSelectedMode(mode) {
+  modeBoxes.forEach(box => {
+    if (box.id === mode + "ModeBox") {
+      box.classList.add("highlight-glow");
+    } else {
+      box.classList.remove("highlight-glow");
+    }
+  });
 }
 
 // Start game function that loads the appropriate script based on the selected game mode.
