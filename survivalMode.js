@@ -1,5 +1,4 @@
-//   survivalMode.js  
-
+// survivalMode.js
 // ============================
 // CHAOS KEYBOARD BATTLE - SURVIVAL MODE
 // ============================
