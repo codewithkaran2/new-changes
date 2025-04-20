@@ -500,9 +500,27 @@
     }
   </script>
   
-  <!-- External Main Script (handles mode selection and dynamic loading) -->
+ <!-- External Main Script (handles mode selection and dynamic loading) -->
   <script src="main.js"></script>
+  <!-- Wrap and extend existing selection functions to add highlight -->
   <script>
+    // Preserve originals
+    const _origDuo = window.selectDuoMode;
+    const _origSurvival = window.selectSurvivalMode;
+
+    window.selectDuoMode = function() {
+      document.getElementById('duoButton').classList.add('selected');
+      document.getElementById('survivalButton').classList.remove('selected');
+      if (typeof _origDuo === 'function') _origDuo();
+    };
+
+    window.selectSurvivalMode = function() {
+      document.getElementById('survivalButton').classList.add('selected');
+      document.getElementById('duoButton').classList.remove('selected');
+      if (typeof _origSurvival === 'function') _origSurvival();
+    };
+  </script>
+
 // Opens your Google Form in a new tab
     function openFeedback() {
       window.open(
