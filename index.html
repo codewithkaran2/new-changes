@@ -28,7 +28,17 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    
+
+    /* Highlight animation for selected mode button */
+    @keyframes glowBorder {
+      0%, 100% { box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+      50%      { box-shadow: 0 0 20px rgba(255,255,255,0.9); }
+    }
+    .mode-button.selected {
+      animation: glowBorder 1.5s ease-in-out infinite;
+      transform: translateY(-2px);
+    }
+
     /* Damage Flash, Pulse, Wave & Shake Animations */
     @keyframes flashEffect {
       0% { background-color: var(--damage-color); }
