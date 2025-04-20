@@ -502,7 +502,7 @@
   
  <!-- External Main Script (handles mode selection and dynamic loading) -->
   <script src="main.js"></script>
-  <!-- Wrap and extend existing selection functions to add highlight -->
+ <!-- Wrap and extend existing selection functions to add highlight -->
   <script>
     // Preserve originals
     const _origDuo = window.selectDuoMode;
@@ -519,9 +519,8 @@
       document.getElementById('duoButton').classList.remove('selected');
       if (typeof _origSurvival === 'function') _origSurvival();
     };
-  </script>
 
-// Opens your Google Form in a new tab
+  // Opens your Google Form in a new tab
     function openFeedback() {
       window.open(
         'https://docs.google.com/forms/d/e/1FAIpQLSeAoFZsKul8s3ri1X4Dk6igH8n2kC3_mv_drBF1xBCmjr_9jw/viewform?usp=dialog',
