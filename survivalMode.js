@@ -3,6 +3,8 @@
 // CHAOS KEYBOARD BATTLE - SURVIVAL MODE
 // ============================
 
+// 1) At the top of your file, add:
+let playerName = 'Player 1';
 let canvas, ctx;
 let paused = false;
 let gameOverState = false;
