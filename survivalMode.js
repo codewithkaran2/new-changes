@@ -261,13 +261,22 @@ function update() {
 }
 
 function gameOver() {
-  gameOverState = true;
-  ctx.fillStyle = "red";
-  ctx.font = "40px Arial";
-  ctx.fillText("Game Over", canvas.width / 2 - 100, canvas.height / 2);
-  const gameOverScreen = document.getElementById("gameOverScreen");
-  if (gameOverScreen) {
-    gameOverScreen.classList.remove("hidden");
+function showLoseScreen() {
+  // stop timers/loops as you already do…
+  const rt = document.getElementById('resultText');
+  rt.innerText = `${playerName} 👎🏻!`;
+  rt.style.color = 'red';
+  document.getElementById('gameOverScreen').classList.remove('hidden');
+}
+
+function showWinScreen() {
+  // stop timers/loops…
+  const rt = document.getElementById('resultText');
+  rt.innerText = `${playerName} 🏆!`;
+  rt.style.color = 'gold';
+  document.getElementById('gameOverScreen').classList.remove('hidden');
+  // 4) Wherever you detect “all waves cleared,” call showWinScreen();
+//    Wherever health ≤ 0, call showLoseScreen() instead of plain gameOver().
   }
 }
 
