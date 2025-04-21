@@ -448,22 +448,33 @@
   <canvas id="gameCanvas" width="1600" height="900"></canvas>
   
   <!-- Player Controls (placed below canvas) -->
-  <div id="playerControls">
-    <div class="control-box">
-      <h3 id="p1ControlTitle">🟦Player 1🎮:</h3>
-      <p>W, A, S, D - Move</p>
-      <p>SPACE - Shoot</p>
-      <p>Q - 🛡️Shield</p>
-      <p>E - Dash</p>
-    </div>
-    <div class="control-box" id="p2ControlBox">
-      <h3>🟥Player 2🎮:</h3>
-      <p>Arrow Keys - Move</p>
-      <p>ENTER - Shoot</p>
-      <p>M - 🛡️Shield</p>
-      <p>O - Dash</p>
-    </div>
+<div id="playerControls">
+  <div class="control-box">
+    <h3 id="p1ControlTitle">🟦Player 1🎮:</h3>
+    <p>
+      <span class="key">W</span>
+      <span class="key">A</span>
+      <span class="key">S</span>
+      <span class="key">D</span> – Move
+    </p>
+    <p><span class="key">SPACE</span> – Shoot</p>
+    <p><span class="key">Q</span> – 🛡️Shield</p>
+    <p><span class="key">E</span> – Dash</p>
   </div>
+  <div class="control-box" id="p2ControlBox">
+    <h3>🟥Player 2🎮:</h3>
+    <p>
+      <span class="key">↑</span>
+      <span class="key">↓</span>
+      <span class="key">←</span>
+      <span class="key">→</span> – Move
+    </p>
+    <p><span class="key">ENTER</span> – Shoot</p>
+    <p><span class="key">M</span> – 🛡️Shield</p>
+    <p><span class="key">O</span> – Dash</p>
+  </div>
+</div>
+
   
   <!-- Game Control Buttons -->
   <div id="controlsContainer" class="control-container">
