@@ -327,12 +327,31 @@
       font-size: 1.5rem;
     }
     .control-box p {
-      margin: 5px 0;
+  margin: 5px 0;
     }
-    #playerControls .control-box:nth-child(2) {
-      border-color: red;
-    }
-    
+
+   /* Optional: Add border colors for each player */
+   #playerControls .control-box:nth-child(1) {
+   border-color: blue;
+   }
+
+   #playerControls .control-box:nth-child(2) {
+   border-color: red;
+   }
+
+   /* Keyboard-style keycaps for both players */
+   #playerControls .key {
+   display: inline-block;
+   padding: 4px 8px;
+   margin: 2px;
+   background-color: #fff;
+   color: #000;
+   border: 2px solid #ccc;
+   border-radius: 6px;
+   font-family: monospace;
+   font-weight: bold;
+   }
+ 
     /* Game Control Buttons styling */
     #controlsContainer {
       display: flex;
