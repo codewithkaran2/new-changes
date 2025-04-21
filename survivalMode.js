@@ -273,6 +273,8 @@ function gameOver() {
 
 // Called when Survival Mode starts
 function survivalStartGame() {
+  // 2) In your start function, grab the name once:
+  playerName = document.getElementById('player1NameInput').value.trim() || 'Player 1';
   console.log("Survival mode starting...");
 
   // Get canvas & context
